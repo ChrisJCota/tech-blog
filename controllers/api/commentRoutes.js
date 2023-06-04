@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { User, Blog, Comments } = require("../../models");
+const withAuth = require('../../utils/auth.js');
 
 router.get("/", (req, res) => {
     Comments.findAll({ include: [User, Blog] })
