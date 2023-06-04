@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
     res.render('login');
   });
 
-  router.get("/dashboard", (req, res) => {
+  router.get("/homepage", (req, res) => {
     if (!req.session.user) {
         return res.redirect('/login')
     }
@@ -46,7 +46,7 @@ router.get('/', async (req, res) => {
     }).then(userData => {
         const blogData = userData.get({ plain: true })
         blogData.loggedIn = req.session.user ? true : false
-        res.render("dashboard", blogData)
+        res.render("homepage", blogData)
     })
 })
 
