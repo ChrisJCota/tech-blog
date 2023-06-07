@@ -36,7 +36,7 @@ router.post('/', withAuth, async (req, res) => {
     try {
         const newUser = await User.create({
             id: newUser.id,
-            username: newUser.username
+            name: newUser.name
         });
 
         res.status(200).json(newUser);
@@ -49,7 +49,7 @@ router.post("/login", (req, res) => {
 
     User.findOne({
         where: {
-            username: req.body.username
+            name: req.body.name
         }
     }).then(correctUser => {
         if (!correctUser) {
@@ -59,7 +59,7 @@ router.post("/login", (req, res) => {
         if (bcrypt.compareSync(req.body.password, correctUser.password)) {
             req.session.user = {
                 id: correctUser.id,
-                username: correctUser.username
+                name: correctUser.name
             }
             return res.json(correctUser)
         } else {
