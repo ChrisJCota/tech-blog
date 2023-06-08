@@ -1,7 +1,7 @@
-var existingBlogs = document.querySelector("#existingblogs")
-var createNew = document.querySelector("#createNew")
-var newPost = document.querySelector("#newpost")
-var newBlog = document.querySelector('#newBlog')
+var existingBlogs = document.querySelector("#existingblogs");
+var createNew = document.querySelector("#createNew");
+var newPost = document.querySelector("#newpost");
+var newBlog = document.querySelector('#newBlog');
 
 function hideCreateNew() {
     createNew.hidden=true;
