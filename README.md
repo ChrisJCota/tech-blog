@@ -36,3 +36,7 @@ This project can be used as a template for creating a project with MVC framework
 * Create a comment: POST `/api/blogs/:blogId/comments`
 * Delete a reaction: DELETE `/api/blogs/:blogId/comments/:commentId`
 
+
+## credits
+Module-13 MVC Framework UNH Full-stack bootcamp
+Chris Cota - https://github.com/ChrisJCota
